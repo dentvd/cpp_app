@@ -2,21 +2,22 @@
 using namespace std;
 int main()
 {
-	int min, max, a;
-	cout << "\tEnter range start=>";
-	cin >> min;
-	cout << "\tEnter end of range=>";
-	cin >> max;
-	cout << "\tEnter number=>";
-	cin >> a;
+    cout << "\t\t\t#>----------< Product >-----------<#" << endl;
+    cout << "\t\t\t|    1 - jewelry set  - 20.31 $    |" << endl;
+    cout << "\t\t\t|    2 - garland      - 41.76 $    |" << endl;
+    cout << "\t\t\t|    3 - clapperboard -  1.50 $    |" << endl;
+    cout << "\t\t\t|    4 - mask         - 15.00 $    |" << endl;
+    cout << "\t\t\t#>--------------------------------<#" << endl;
+    cout << "\t\t\t|    Exit - 0                      |" << endl;
+    cout << "\t\t\t#>--------------------------------<#" << endl;
+    cout << "\t\t\tEnter product =>";
+    int number;
+    cin >> number;
+    system("cls");
+    switch (number)
+    {
+
+    }
 	
-	while (a<min||a>max)
-	{
-		
-		cout << "\tEnter number=>";
-		cin >> a;
-		
-	}
-    	cout << "\tThe number is in the range";
 	return 0;
 }
