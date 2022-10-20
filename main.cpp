@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-    bool j=20.31, g=41.76, c=1.5, m=15;//вартість одиниці товару
+    double j=20.31, g=41.76, c=1.5, m=15;//вартість одиниці товару
     int nj=80, ng=24, nc=54, nm=18;//початкова наявність 
     cout << "\t\t\t#>----------< Product >-----------<#" << endl;
     cout << "\t\t\t|    1 - jewelry set  - 20.31 $    |" << endl;
@@ -13,13 +13,15 @@ int main()
     cout << "\t\t\t|    Exit - 0                      |" << endl;
     cout << "\t\t\t#>--------------------------------<#" << endl;
     cout << "\t\t\tEnter product =>";
+    
     int number;
     cin >> number;
     system("cls");
+
     switch (number)
     {
     case 1:
-    {   int n, nj;
+    {   int n;
     do
     {
 
@@ -27,25 +29,29 @@ int main()
         cin >> n;
         if (nj >= n)
         {
-            double sumj = n * 20.31;
+            double sumj = n *j;
             cout << "\tjewelry set   " << n << "x 20.31$\t" << sumj << "$";
+
+            nj -= n;
+            break;
         }
         else if (nj < n)
         {
             cout << "\tNOT AVAILABLE!!! REMAINDER => " << nj << endl;
 
-            nj -= n;
+            
         }
 
 
     }
-        while (n!= 0 || n < nj);
+        while (n!= 0 || n <= nj);
         //cout << "\tEnter quantity(Exit 0)=>";
         //cin >> n;
     }break;
     case 2:
-    {
-        int n, ng;
+    { 
+        int n;
+        
         do
         {
 
@@ -53,14 +59,16 @@ int main()
             cin >> n;
             if (ng >= n)
             {
-                double sumg = n * 41.76;
+                double sumg = n * g;
                 cout << "\tgarland   " << n << "x 41.76$\t" << sumg << "$";
+                ng -= n;
+                break;
             }
             else if (ng < n)
             {
                 cout << "\tNOT AVAILABLE!!! REMAINDER => " << ng << endl;
 
-                ng -= n;
+                
             }
 
 
