@@ -74,6 +74,59 @@ int main()
 
             } while (n != 0 || n < ng);
         }break;
+        case 3:
+        {
+            int n;
+
+            do
+            {
+
+                cout << "\tEnter quantity=>";
+                cin >> n;
+                if (nc >= n)
+                {
+                    double sumg = n * c;
+                    cout << "\tclapperboard   " << n << "x 1.5$\t" << sumg << "$";
+                    nc -= n;
+                    break;
+                }
+                else if (nc < n)
+                {
+                    cout << "\tNOT AVAILABLE!!! REMAINDER => " << nc << endl;
+
+
+                }
+
+
+            } while (n != 0 || n < nc);
+        }break;
+        case 4:
+        {
+            int n;
+
+            do
+            {
+
+                cout << "\tEnter quantity=>";
+                cin >> n;
+                if (nm >= n)
+                {
+                    double summ = n * m;
+                    cout << "\tmask   " << n << "x 1.5$\t" << summ << "$";
+                    nm -= n;
+                    break;
+                }
+                else if (nm < n)
+                {
+                    cout << "\tNOT AVAILABLE!!! REMAINDER => " << nm << endl;
+
+
+                }
+
+
+            } while (n != 0 || n < nm);
+        }break;
+
         }
         cout << endl<<"\t\t\tEnter product =>";
     }while (number!=0);
