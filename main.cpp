@@ -17,34 +17,57 @@ int main()
     cin >> number;
     system("cls");
     switch (number)
-    {case 1:
-        int n,zj;
-       
-     
+    {
+    case 1:
+    {   int n, nj;
+    do
+    {
+
         cout << "\tEnter quantity=>";
         cin >> n;
-        while(n!=0||n<zj)
-        {
-        zj= nj - n;
-
-        {if (zj >= n)
+        if (nj >= n)
         {
             double sumj = n * 20.31;
             cout << "\tjewelry set   " << n << "x 20.31$\t" << sumj << "$";
         }
-        else if (zj < n)
+        else if (nj < n)
         {
             cout << "\tNOT AVAILABLE!!! REMAINDER => " << nj << endl;
-            cout << "\tEnter quantity(Exit 0)=>";
-            cin >> n;
 
+            nj -= n;
         }
-        }
-     
 
-    }break;
 
     }
+        while (n!= 0 || n < nj);
+        //cout << "\tEnter quantity(Exit 0)=>";
+        //cin >> n;
+    }break;
+    case 2:
+    {
+        int n, ng;
+        do
+        {
+
+            cout << "\tEnter quantity=>";
+            cin >> n;
+            if (ng >= n)
+            {
+                double sumg = n * 41.76;
+                cout << "\tgarland   " << n << "x 41.76$\t" << sumg << "$";
+            }
+            else if (ng < n)
+            {
+                cout << "\tNOT AVAILABLE!!! REMAINDER => " << ng << endl;
+
+                ng -= n;
+            }
+
+
+        } while (n != 0 || n < ng);
+    }break;
+
+    }return 0;
 	
-	return 0;
 }
+	
