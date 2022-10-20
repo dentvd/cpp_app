@@ -4,21 +4,23 @@ int main()
 {
     double j = 20.31, g = 41.76, c = 1.5, m = 15;//вартість одиниці товару
     int nj = 80, ng = 24, nc = 54, nm = 18;//початкова наявність 
-    cout << "\t\t\t#>----------< Product >-----------<#" << endl;
-    cout << "\t\t\t|    1 - jewelry set  - 20.31 $    |" << endl;
-    cout << "\t\t\t|    2 - garland      - 41.76 $    |" << endl;
-    cout << "\t\t\t|    3 - clapperboard -  1.50 $    |" << endl;
-    cout << "\t\t\t|    4 - mask         - 15.00 $    |" << endl;
-    cout << "\t\t\t#>--------------------------------<#" << endl;
-    cout << "\t\t\t|    Exit - 0                      |" << endl;
-    cout << "\t\t\t#>--------------------------------<#" << endl;
-    cout << "\t\t\tEnter product =>";
+   
+    
     int number=1;
     do
     {
-        
+        system("cls");
+        cout << "\t\t\t#>----------< Product >-----------<#" << endl;
+        cout << "\t\t\t|    1 - jewelry set  - 20.31 $    |" << endl;
+        cout << "\t\t\t|    2 - garland      - 41.76 $    |" << endl;
+        cout << "\t\t\t|    3 - clapperboard -  1.50 $    |" << endl;
+        cout << "\t\t\t|    4 - mask         - 15.00 $    |" << endl;
+        cout << "\t\t\t#>--------------------------------<#" << endl;
+        cout << "\t\t\t|    Exit - 0                      |" << endl;
+        cout << "\t\t\t#>--------------------------------<#" << endl;
+        cout << "\t\t\tEnter product =>";
         cin >> number;
-
+        system("cls");
         switch (number)
         {
         case 1:
@@ -26,7 +28,7 @@ int main()
         do
         {
 
-            cout << "\tEnter quantity=>";
+            cout << "\t\t\tEnter quantity=>";
             cin >> n;
             if (nj >= n)
             {
@@ -55,7 +57,7 @@ int main()
             do
             {
 
-                cout << "\tEnter quantity=>";
+                cout << "\t\t\tEnter quantity=>";
                 cin >> n;
                 if (ng >= n)
                 {
@@ -81,7 +83,7 @@ int main()
             do
             {
 
-                cout << "\tEnter quantity=>";
+                cout << "\t\t\tEnter quantity=>";
                 cin >> n;
                 if (nc >= n)
                 {
@@ -107,7 +109,7 @@ int main()
             do
             {
 
-                cout << "\tEnter quantity=>";
+                cout << "\t\t\tEnter quantity=>";
                 cin >> n;
                 if (nm >= n)
                 {
@@ -128,8 +130,10 @@ int main()
         }break;
 
         }
-        cout << endl<<"\t\t\tEnter product =>";
+        cout << endl;
+        system("pause");
     }while (number!=0);
+    cout <<endl<< "\tTo pay=> " << nm + nc + ng + nj;
     return 0;
 }
 
